@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>growing & shrinking</title>
+</head>
+<body><center>
+    <pre><h1>Name: DHARANI K                                             USN: 1MJ18CS037</h1></per>
+        <h1>TEXT-GROWING AND TEXT-SHRINKING</h1>
+    <h1 id="Text1">DHARANI K</h1>
+    <h1 id="Text2">1MJ18CS037</h1>
+    <script>
+        var size=10;
+        var i=0;
+        var Wait=setInterval(Grow,100);
+        
+        function Grow()
+        {
+        if(size<51)
+        {
+        size=size+1;
+        document.getElementById("Text1").style.fontSize=(size+'pt');
+        document.getElementById("Text1").style.color="red";
+        document.getElementById("Text2").style.visibility="hidden";
+        }
+        else
+        {
+        clearInterval(Wait);
+        Wait=setInterval(Shrink,100);
+        document.getElementById("Text1").style.visibility="hidden";
+        document.getElementById("Text1").style.fontSize='1pt';
+        document.getElementById("Text2").style.visibility="visible";
+        }
+        }
+        function Shrink()
+        {
+        if(size>5)
+        {
+        size=size-1;
+        document.getElementById("Text2").style.fontSize=(size+'pt');
+        document.getElementById("Text2").style.color="blue";
+        }
+        else
+        {
+        clearInterval(Wait);
+        }
+        }
+        </script>
+</center>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
